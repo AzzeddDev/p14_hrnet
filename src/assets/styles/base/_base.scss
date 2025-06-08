@@ -1,3 +1,14 @@
+html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body, main, header, footer {
+  width: 1240px;
+}
+
 .title {
   display: flex;
   align-items: center;
