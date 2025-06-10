@@ -1,34 +1,4 @@
-html {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-body, main, header, footer {
-  width: 1240px;
-}
-
-.title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-label {
-  display: block;
-  margin-top: 1rem;
-  margin-bottom: 10px;
-}
-
-.address {
-  margin-top: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+  font-family: 'Noto+Sans', sans-serif;
 }
