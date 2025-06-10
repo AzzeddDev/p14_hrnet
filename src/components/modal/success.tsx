@@ -4,6 +4,8 @@ type ModalProps = {
     children: React.ReactNode
 }
 
+// TODO: use as a plugin and mention it's openclassroom
+
 const Modal = ({ isOpen, onClose, children }: ModalProps) => {
     if (!isOpen) return null
 
