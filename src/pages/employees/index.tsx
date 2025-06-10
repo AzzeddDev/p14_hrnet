@@ -23,7 +23,6 @@ const EmployeesListPage = () => {
 
     return (
         <div className="container">
-            <Link to={routes.home}>Add employees</Link>
             <h2>Current Employees</h2>
             <DataTable
                 columns={columns}
