@@ -1,0 +1,11 @@
+/* Medium devices (tablets, less than 768px) */
+@media all and (min-width: 767px) and (max-width: 980px) {
+
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  body, main, header, footer {
+    width: 100% !important;
+  }
+}
