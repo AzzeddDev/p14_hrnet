@@ -9,13 +9,15 @@ const Header = () => {
 
     return (
         <nav className="navbar">
-            <div className="logo">HRnet</div>
+            <Link className="logo" to={routes.home}>
+                <h1>HRnet</h1>
+            </Link>
             <div className="links">
                 {isEmployeesListPage && (
-                    <Link to={routes.home}>Add employees</Link>
+                    <Link className={"button"} to={routes.home}>Add Employee</Link>
                 )}
                 {isHomePage && (
-                    <Link to={routes.employeesList}>View Current Employees</Link>
+                    <Link className={"button"} to={routes.employeesList}>Employees List</Link>
                 )}
             </div>
         </nav>
