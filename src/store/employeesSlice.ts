@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import {defaultEmployees} from "../data/defaultEmployees";
 
-type Employee = {
+export type Employee = {
     firstName: string
     lastName: string
     dateOfBirth: string
@@ -17,8 +18,9 @@ type EmployeesState = {
 }
 
 const initialState: EmployeesState = {
-    employees: [],
+    employees: defaultEmployees,
 }
+
 
 const employeesSlice = createSlice({
     name: 'employees',
