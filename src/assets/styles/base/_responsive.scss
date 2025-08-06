@@ -1,11 +1,43 @@
 /* Medium devices (tablets, less than 768px) */
 @media all and (min-width: 767px) and (max-width: 980px) {
+  .imgCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc( 100vh - 54px );
+    padding: 82px 10px !important;
+  }
 
+  .col-md-8 {
+    max-width: 80%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   body, main, header, footer {
     width: 100% !important;
+  }
+
+  .col-sm-12 {
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .imgCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc( 100vh - 54px );
+    padding: 82px 10px !important;
   }
 }

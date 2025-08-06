@@ -1,0 +1,8 @@
+.table-responsive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $body;
+  padding: 42px 10px !important;
+}

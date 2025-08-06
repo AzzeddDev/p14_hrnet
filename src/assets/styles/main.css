@@ -205,6 +205,10 @@ input:focus, select:focus {
   justify-content: space-between;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
 /* styles.css or SCSS */
 .searchable-dropdown {
   position: relative;
@@ -280,11 +284,47 @@ body {
   color: #09BC8A;
 }
 
+.footerRegistered {
+  font-size: 13px;
+}
+
 /* Medium devices (tablets, less than 768px) */
+@media all and (min-width: 767px) and (max-width: 980px) {
+  .imgCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 54px);
+    padding: 82px 10px !important;
+  }
+  .col-md-8 {
+    max-width: 80%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   body, main, header, footer {
     width: 100% !important;
+  }
+  .col-sm-12 {
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .imgCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 54px);
+    padding: 82px 10px !important;
   }
 }
 .modal-overlay {
@@ -325,6 +365,12 @@ body {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.outside {
+  color: #fff;
+  top: -25px;
+  right: -20px !important;
 }
 
 .imgCol {
@@ -394,6 +440,15 @@ form {
 .smallLabel {
   font-size: 12px;
   font-weight: 600;
+}
+
+.table-responsive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f6f9;
+  padding: 42px 10px !important;
 }
 
 /*# sourceMappingURL=main.css.map */
