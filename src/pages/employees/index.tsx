@@ -1,8 +1,7 @@
 import { useSelector } from "react-redux"
 import { RootState } from "../../store/store"
 import DataTable from "react-data-table-component"
-import {routes} from "../../router/routes";
-import {Link} from "react-router-dom";
+import {Helmet} from "react-helmet"
 
 const EmployeesListPage = () => {
     const employees = useSelector((state: RootState) => state.employees.employees)
@@ -22,16 +21,25 @@ const EmployeesListPage = () => {
     // console.log("Employees dans Redux:", employees)
 
     return (
-        <div className="container">
-            <h2>Current Employees</h2>
-            <DataTable
-                columns={columns}
-                data={employees}
-                pagination
-                highlightOnHover
-                striped
-            />
-        </div>
+        <>
+            <Helmet>
+                <title>HRnet - Current Employee</title>
+            </Helmet>
+
+            <div className="container-fluid table-responsive">
+                <div className="container">
+                    <div className="col-sm-12">
+                        <h2>Current Employees</h2>
+                        <DataTable
+                            columns={columns}
+                            data={employees}
+                            pagination
+                            highlightOnHover
+                            striped/>
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
 
