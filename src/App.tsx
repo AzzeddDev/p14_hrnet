@@ -1,12 +1,9 @@
-import {useLocation} from "react-router-dom";
-import Router from "./router";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import {routes} from "./router/routes";
+import {useLocation} from "react-router-dom"
+import Router from "./router"
+import Header from "./components/header"
+import Footer from "./components/footer"
 
 function App() {
-    const location = useLocation()
-    const isEmployeesListPage = location.pathname === routes.employeesList
 
     return (
         <>
@@ -18,11 +15,9 @@ function App() {
                 <Router/>
             </main>
 
-            {isEmployeesListPage && (
-                <footer>
-                    <Footer/>
-                </footer>
-            )}
+            <footer>
+                <Footer/>
+            </footer>
         </>
     )
 }
