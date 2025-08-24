@@ -1,5 +1,4 @@
-import { useRef, useState } from "react"
-import { Helmet } from "react-helmet"
+import { useState } from "react"
 import { SimpleModal } from "azzeddine-modal"
 import EmployeeForm from "../../components/form"
 import EmployeeSuccessModalContent from "../../components/modal/child"
@@ -15,9 +14,7 @@ const HomePage = () => {
 
     return (
         <>
-            <Helmet>
-                <title>HRnet - Add New Employee</title>
-            </Helmet>
+            <title>HRnet - Add New Employee</title>
 
             <section>
                 <div className="imgCol">

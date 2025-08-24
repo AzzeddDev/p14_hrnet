@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux"
 import { RootState } from "../../store/store"
 import DataTable from "react-data-table-component"
-import {Helmet} from "react-helmet"
 
 const EmployeesListPage = () => {
     const employees = useSelector((state: RootState) => state.employees.employees)
@@ -22,9 +21,7 @@ const EmployeesListPage = () => {
 
     return (
         <>
-            <Helmet>
-                <title>HRnet - Current Employee</title>
-            </Helmet>
+            <title>HRnet - Current Employee</title>
 
             <div className="container-fluid table-responsive">
                 <div className="container">
