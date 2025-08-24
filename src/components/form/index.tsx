@@ -1,9 +1,9 @@
 import { useRef } from "react"
 import { useDispatch } from "react-redux"
-import {addEmployee} from "../../store/employeesSlice"
+import { addEmployee } from "../../store/employeesSlice"
 import SearchableDropdown from "../dropdown"
-import {states} from "../../data/states"
-import {departements} from "../../data/departements"
+import { states } from "../../data/states"
+import { departements } from "../../data/departements"
 
 interface EmployeeFormProps {
     onSuccess: (firstName: string, lastName: string) => void
@@ -33,11 +33,18 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ onSuccess }) => {
 
         dispatch(addEmployee(newEmployee))
         onSuccess(newEmployee.firstName, newEmployee.lastName)
-        formRef.current.reset()
+        handleReset()
     }
 
-    // TODO: composant label / input / select
-    // TODO; check atomic design
+    const handleReset = () => {
+        // reset native form inputs
+        formRef.current?.reset()
+
+        // manually reset the hidden input inside SearchableDropdown
+        const dropdownInput = formRef.current?.querySelector<HTMLInputElement>("#state")
+        if (dropdownInput) dropdownInput.value = ""
+    }
+
     return (
         <form id="create-employee" ref={formRef} onSubmit={handleSubmit}>
             {/* First & Last Name */}
@@ -105,7 +112,7 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ onSuccess }) => {
             </select>
 
             <div className="d-flex justify-content-between">
-                <button type="button" className="button muted" onClick={() => formRef.current?.reset()}>Reset form</button>
+                <button type="button" className="button muted" onClick={handleReset}>Reset form</button>
                 <button type="submit" className="button">Add Employee</button>
             </div>
         </form>
