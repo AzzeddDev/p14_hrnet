@@ -13,7 +13,7 @@ export const defaultEmployees: Employee[] = [
         department: "Engineering",
     },
     {
-        firstName: "Jane",
+        firstName: "Alain",
         lastName: "Smith",
         dateOfBirth: "1985-11-23",
         startDate: "2018-07-01",
