@@ -366,6 +366,17 @@ body {
   cursor: pointer;
 }
 
+.modal-close-outside {
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
 .outside {
   color: #fff;
   top: -25px;
