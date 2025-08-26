@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { SimpleModal } from "azzeddine-modal"
+import {ComplexModal, SimpleModal} from "azzeddine-modal"
 import EmployeeForm from "../../components/form"
 import EmployeeSuccessModalContent from "../../components/modal/child"
 // @ts-ignore
@@ -27,15 +27,25 @@ const HomePage = () => {
                 </div>
             </section>
 
-            {/* Here new modal package */}
-            <SimpleModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+            {/* Modal package classic */}
+            {/*<SimpleModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>*/}
+            {/*    {newlyAddedEmployee && (*/}
+            {/*        <EmployeeSuccessModalContent*/}
+            {/*            firstName={newlyAddedEmployee.firstName}*/}
+            {/*            lastName={newlyAddedEmployee.lastName}*/}
+            {/*        />*/}
+            {/*    )}*/}
+            {/*</SimpleModal>*/}
+
+            {/* Modal package complex */}
+            <ComplexModal isOpen={isModalOpen} closeButtonPosition={"outside"} onClose={() => setIsModalOpen(false)}>
                 {newlyAddedEmployee && (
                     <EmployeeSuccessModalContent
                         firstName={newlyAddedEmployee.firstName}
                         lastName={newlyAddedEmployee.lastName}
                     />
                 )}
-            </SimpleModal>
+            </ComplexModal>
 
         </>
     )
